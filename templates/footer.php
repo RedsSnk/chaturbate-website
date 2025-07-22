@@ -163,10 +163,10 @@ window.GA_MEASUREMENT_ID = <?=json_encode($c['google_analytics_id'] ?? '')?>;
   // Age Overlay Logic
   function setAgeConfirmed(days) {
     var d = new Date(); d.setTime(d.getTime() + (days*24*60*60*1000));
-    document.cookie = "tinycb_age_confirmed=1; expires="+d.toUTCString()+"; path=/";
+    document.cookie = "kinkat_age_confirmed=1; expires="+d.toUTCString()+"; path=/";
   }
   function getAgeConfirmed() {
-    return document.cookie.indexOf("tinycb_age_confirmed=1") > -1;
+    return document.cookie.indexOf("kinkat_age_confirmed=1") > -1;
   }
   function showAgeOverlay() {
     document.getElementById('age-overlay').style.display='';
